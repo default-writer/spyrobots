@@ -1,0 +1,6 @@
+[MASTER]
+init-hook='import sys; sys.path.append("./app")'
+ignore=test
+
+[MESSAGES CONTROL]
+disable=missing-docstring, line-too-long, duplicate-code

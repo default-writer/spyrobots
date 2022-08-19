@@ -1,0 +1,17 @@
+digraph "pylint.checkers.classes.ClassChecker" {
+rankdir=BT
+charset="utf-8"
+"collections.defaultdict" [color="black", fontcolor="black", label="{collections.defaultdict|default_factory : NoneType\l|}", shape="record", style="solid"];
+"optparse.Values" [color="black", fontcolor="black", label="{optparse.Values|jobs : int\lpersistent : int\lspelling_private_dict_file\l|ensure_value(attr, value)\lread_file(filename, mode)\lread_module(modname, mode)\l}", shape="record", style="solid"];
+"pylint.checkers.base_checker.BaseChecker" [color="black", fontcolor="black", label="{pylint.checkers.base_checker.BaseChecker|enabled : bool\llevel : int\llinter : NoneType\lmessages\lmsgs\lname\lname : str\loptions\lreports\lstats\l|add_message(msgid, line, node, args, confidence, col_offset)\lcheck_consistency()\lclose()\lcreate_message_definition_from_tuple(msgid, msg_tuple)\lget_full_documentation(msgs, options, reports, doc, module)\lget_message_definition(msgid)\lopen()\l}", shape="record", style="solid"];
+"pylint.checkers.classes.ClassChecker" [color="black", fontcolor="black", label="{pylint.checkers.classes.ClassChecker|leave_asyncfunctiondef\lmsgs : dict\lname : str\loptions : tuple\lpriority : int\lvisit_asyncfunctiondef\l|leave_classdef(node): \lleave_functiondef(node): \lvisit_assign(assign_node): \lvisit_assignattr(node): \lvisit_attribute(node): \lvisit_classdef(node): \lvisit_functiondef(node): \lvisit_name(node): \l}", shape="record", style="solid"];
+"pylint.checkers.classes.ScopeAccessMap" [color="black", fontcolor="black", label="{pylint.checkers.classes.ScopeAccessMap|\l|accessed(scope)\lset_accessed(node)\l}", shape="record", style="solid"];
+"pylint.config.options_provider_mixin.OptionsProviderMixIn" [color="black", fontcolor="black", label="{pylint.config.options_provider_mixin.OptionsProviderMixIn|config\llevel : int\lname : str\loptions : Tuple[Tuple[str, Dict[str, Any]], ...]\lpriority : int\l|get_option_def(opt)\lload_defaults()\loption_attrname(opt, optdict)\loption_value(opt)\loptions_and_values(options)\loptions_by_section()\lset_option(optname, value, action, optdict)\l}", shape="record", style="solid"];
+"typing.Dict" [color="black", fontcolor="black", label="{typing.Dict|\l|}", shape="record", style="solid"];
+"pylint.checkers.base_checker.BaseChecker" -> "pylint.config.options_provider_mixin.OptionsProviderMixIn" [arrowhead="empty", arrowtail="none"];
+"pylint.checkers.classes.ClassChecker" -> "pylint.checkers.base_checker.BaseChecker" [arrowhead="empty", arrowtail="none"];
+"collections.defaultdict" -> "pylint.checkers.classes.ScopeAccessMap" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="_scopes", style="solid"];
+"optparse.Values" -> "pylint.config.options_provider_mixin.OptionsProviderMixIn" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="config", style="solid"];
+"pylint.checkers.classes.ScopeAccessMap" -> "pylint.checkers.classes.ClassChecker" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="_accessed", style="solid"];
+"typing.Dict" -> "pylint.checkers.base_checker.BaseChecker" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="stats", style="solid"];
+}
