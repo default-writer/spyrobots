@@ -1,0 +1,9 @@
+{
+    "dotnet-test-explorer.testProjectPath": "+(Build.Behave|Build.Tests)",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
