@@ -5,12 +5,9 @@ import json
 import os
 import sys
 
-from dotenv import load_dotenv
-
 from .core.logging.logger import Log
 from .core.functions import get_current_time
 from .core.utils import config_loader
-from .core.logging.logger import Log
 
 Log.setup(os.path.abspath(os.path.dirname(__file__)))
 

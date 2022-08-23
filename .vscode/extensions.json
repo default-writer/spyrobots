@@ -34,6 +34,10 @@
         "gruntfuggly.todo-tree",
         "aslamanver.vsc-export",
         "dunstontc.vscode-gitignore-syntax",
-        "ms-vscode-remote.remote-containers"
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode-remote.remote-ssh",
+        "DavidAnson.vscode-markdownlint"
     ]
 }
