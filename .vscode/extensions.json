@@ -38,6 +38,11 @@
         "ms-vscode-remote.vscode-remote-extensionpack",
         "ms-vscode-remote.remote-wsl",
         "ms-vscode-remote.remote-ssh",
-        "DavidAnson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "mgesbert.python-path",
+        "ericsia.pythonsnippets3",
+        "eliazbobadilla.python-ultisnippets",
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring"
     ]
 }
