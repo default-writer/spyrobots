@@ -109,8 +109,11 @@ RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y python3 python3-dev python3-pip python3-venv python3-behave pipenv
 
-#RUN ln -s /usr/local/bin/python3 /usr/bin/python & \
-#    ln -s /usr/local/bin/pip3 /usr/bin/pip
+###
+### Uncomment to use
+### RUN ln -s /usr/local/bin/python3 /usr/bin/python & \
+###    ln -s /usr/local/bin/pip3 /usr/bin/pip
+###
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies.
 RUN apt-get update \
