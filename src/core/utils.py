@@ -27,10 +27,12 @@ def path_constructor(_, node):
 yaml.add_implicit_resolver('!path', path_matcher, None, yaml.SafeLoader)
 yaml.add_constructor('!path', path_constructor, yaml.SafeLoader)
 
+def get_env():
+    return os.getenv;
 
 def config_loader(default_file="config.yaml"):
-    log.debug(f"Loading config file: {default_file}")
     load_dotenv()
+    log.debug(f"Loading config file: {default_file}")
     file = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', default_file)
     with open(file, 'rt', encoding='utf-8') as f:
         return yaml.safe_load(f.read())

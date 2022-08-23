@@ -4,11 +4,11 @@ import time
 import pytest
 import random
 
-from dotenv.main import load_dotenv
+from dotenv import load_dotenv
 from unittest.mock import Mock, patch
 from src.core.utils import config_loader
 
-TEST_ENVIRONMENT={'HOSTNAME':'hostname'}
+TEST_ENVIRONMENT={'HOSTNAME':'test'}
 
 from io import StringIO
 from copy import deepcopy
@@ -36,19 +36,6 @@ class FakeTextIOWriter():
                 name: ${HOSTNAME}
         """
         return StringIO(file)
-
-class NoMatchFakeTextIOWriter():
-    def __enter__(self):
-        return self
-    def __exit__(self ,type, value, traceback):
-        pass
-    def read(self):
-        file = """
-            host:
-                name: ${HOSTNAME}
-        """
-        return StringIO(file)
-
 
 class FakeLoggingWriter():
     def __enter__(self):
@@ -160,26 +147,8 @@ class NoEnvVarFakeTextIOWriter():
         pass
     def read(self):
         file = """
-            kafka:
-                bootstrap.servers: ${BOOTSTRAP_SERVERS}
-                sasl.username: ${KAFKA_USER}
-                sasl.password: ${KAFKA_PASSWORD}
-                security.protocol: ${KAFKA_SECURITY_PROTOCOL} #PLAINTEXT
-                sasl.mechanisms: ${KAFKA_SASL_MECHANISMS} #PLAIN"
-                ssl.ca.location: ${certifi} #certifi.where()
-            oauth:
-                token_url: ${TOKEN_URL}
-                client_id: ${CLIENT_ID}
-                client_secret: ${CLIENT_SECRET}
-                client_scope: ${CLIENT_SCOPE}
-                role: ${ROLE}
-            endpoints:
-                updated_provider_address_info:
-                    endpoint: ${BLA}/?arg=updated_provider_address_info
-                    topic:  ${BLA}
-                updated_provider_address_info:
-                    endpoint: ${ENDPOINT2}/?arg=updated_provider_address_info
-                    topic:  ${TOPIC2}
+            host:
+                name: ${BOOTSTRAP_SERVERS}
         """
         return StringIO(file)
 
@@ -196,7 +165,7 @@ def config():
 
 @pytest.fixture
 def config_error():
-    with patch("app.core.utils.load_dotenv") as mock_load_dotenv:
+    with patch("src.core.utils.load_dotenv") as mock_load_dotenv:
         mock_load_dotenv.side_effect = load_env
         with patch('builtins.open') as mock_builtins_open:
             mock_builtins_open.return_value = NoEnvVarFakeTextIOWriter()
@@ -212,6 +181,15 @@ def logging():
     yield logging_patch
     logging_patch.stop()
 
+@pytest.fixture
+def test_env():
+    env_patch = patch('src.core.utils.os.getenv')
+    mock = env_patch.start()
+    mock.side_effect = getenv
+    yield env_patch
+    env_patch.stop()
+    with patch("", getenv) as mock_getenv:
+        yield mock_getenv
 
 def getenv(name):
     if name not in TEST_ENVIRONMENT:
