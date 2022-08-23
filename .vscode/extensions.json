@@ -33,6 +33,7 @@
         "hbenl.vscode-test-explorer",
         "gruntfuggly.todo-tree",
         "aslamanver.vsc-export",
-        "dunstontc.vscode-gitignore-syntax"
+        "dunstontc.vscode-gitignore-syntax",
+        "ms-vscode-remote.remote-containers"
     ]
 }
