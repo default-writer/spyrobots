@@ -4,10 +4,10 @@
 import logging
 import logging.config
 import os
-from string import Formatter
-
 import coloredlogs
 import yaml
+
+from string import Formatter
 
 log = logging.getLogger(__name__)
 
