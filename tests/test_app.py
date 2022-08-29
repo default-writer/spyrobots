@@ -9,6 +9,9 @@ def test_add():
     # setup
     a = 1
     b = 3
+
     # call
+    c = add(a, b)
 
     # assert
+    assert c == 4
