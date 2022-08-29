@@ -1,5 +1,6 @@
 from src.app import main
 from src.app import add
+
 def test_app():
     main()
     assert True
