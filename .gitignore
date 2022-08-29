@@ -5,3 +5,5 @@ __pycache__
 /.*
 coverage.*
 /profile.code-profile
+*pylint*
+**/pylint*
