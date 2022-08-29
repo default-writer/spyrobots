@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"njpwerner.autodocstring",
+			"alefragnani.bookmarks",
+			"cucumberopen.cucumber-official",
+			"ryanluker.vscode-coverage-gutters",
+			"mhutchie.git-graph",
+			"donjayamanne.githistory",
+			"sdras.night-owl",
+			"kevinrose.vsc-python-indent",
+			"ericsia.pythonsnippets3",
+			"littlefoxteam.vscode-python-test-adapter",
+			"donjayamanne.python-extension-pack",
+			"mgesbert.python-path",
+			"tabnine.tabnine-vscode",
+			"gruntfuggly.todo-tree",
+			"hbenl.vscode-test-explorer",
+			"aslamanver.vsc-export",
+			"GitHub.remotehub",
+			"vscode.theme-tomorrow-night-blue"
+		]
+	}
+}

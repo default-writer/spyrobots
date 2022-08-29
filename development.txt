@@ -1,0 +1,16 @@
+-r src/requirements.txt
+
+# static analysis
+autopep8
+bandit
+flake8
+pep8-naming
+pycodestyle
+pylint
+black
+
+# testing
+coverage
+pytest
+pytest-mock
+pytest-cov
