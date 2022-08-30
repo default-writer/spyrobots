@@ -1,17 +1,10 @@
-from src.app import main
 from src.app import add
 
-def test_app():
-    main()
-    assert True
-
 def test_add():
-    # setup
+    # assign
     a = 1
-    b = 3
-
-    # call
-    c = add(a, b)
-
+    b = 2
+    # action
+    c = add (a, b)
     # assert
-    assert c == 4
+    assert c == 3

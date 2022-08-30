@@ -1,8 +1,9 @@
 /.pytest_cache
-__pycache__
 /.history
 /.vs
 /.*
-coverage.*
 /profile.code-profile
+__pycache__
+coverage.*
 pylint*
+!/.vscode

@@ -5,31 +5,9 @@
     "version": "2.0.0",
     "configurations": [
         {
-            "label": "start_acceptance_docker_services",
-            "type": "shell",
-            "command": "cd ${workspaceFolder}/acceptance-tests && docker-compose up -d && cd ${workspaceFolder}",
-            "problemMatcher": [],
-            "group": "test",
-            "presentation": {
-                "reveal": "never",
-                "panel": "shared"
-            }
-        },
-        {
-            "label": "stop_acceptance_docker_services",
-            "type": "shell",
-            "command": "cd ${workspaceFolder}/acceptance-tests && docker-compose down && cd ${workspaceFolder}",
-            "problemMatcher": [],
-            "group": "test",
-            "presentation": {
-                "reveal": "never",
-                "panel": "shared"
-            }
-        },
-        {
             "label": "Update code coverage",
             "type": "shell",
-            "command": "pytest --cov='app' --cov-report=xml test",
+            "command": "pytest --cov-report term --cov-report xml:coverage.xml --cov=src",
             "problemMatcher": [],
             "group": "test",
             "presentation": {

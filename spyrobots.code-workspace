@@ -4,7 +4,9 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+	"settings": {
+
+	},
 	"extensions": {
 		"recommendations": [
 			"njpwerner.autodocstring",
@@ -23,8 +25,9 @@
 			"gruntfuggly.todo-tree",
 			"hbenl.vscode-test-explorer",
 			"aslamanver.vsc-export",
-			"GitHub.remotehub",
-			"vscode.theme-tomorrow-night-blue"
+			"github.remotehub",
+			"vscode.theme-tomorrow-night-blue",
+			"emeraldwalk.RunOnSave"
 		]
 	}
 }
