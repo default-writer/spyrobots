@@ -29,7 +29,8 @@
 			"aslamanver.vsc-export",
 			"github.remotehub",
 			"vscode.theme-tomorrow-night-blue",
-			"emeraldwalk.RunOnSave"
+			"emeraldwalk.RunOnSave",
+			"juliencroain.private-extension-manager"
 		]
 	}
 }
