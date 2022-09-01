@@ -18,6 +18,12 @@
         "aslamanver.vsc-export",
         "github.remotehub",
         "vscode.theme-tomorrow-night-blue",
-        "emeraldwalk.RunOnSave"
+        "emeraldwalk.runonsave",
+        "connorshea.vscode-test-explorer-status-bar",
+        "juliencroain.private-extension-manager",
+        "donjayamanne.python-environment-manager",
+        "pomber.git-file-history",
+        "saber2pr.file-git-history",
+        "zokugun.sync-settings"
     ]
 }

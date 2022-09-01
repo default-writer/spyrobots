@@ -3,3 +3,6 @@ def add(a, b):
 
 def sub(a, b):
     return a - b
+
+def double(a, b):
+    return 2*a + 2*b

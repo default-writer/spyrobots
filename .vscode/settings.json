@@ -11,13 +11,25 @@
                 "silent": false,
                 "match": "(.*).py$",
                 "cmd": "pytest --cov-report term --cov-report xml:coverage.xml --cov=src"
-            },
-            {
-                "useShortcut": true,
-                "silent": false,
-                "match": "(.*).py$",
-                "cmd": "coverage-gutters.watchCoverageAndVisibleEditors"
             }
         ]
-    }
+    },
+    "koverage.coverageFileNames": [
+        "lcov.info",
+        "cov.xml",
+        "coverage.xml",
+        "jacoco.xml"
+    ],
+    "koverage.coverageFilePaths": [
+        ".",
+        "coverage"
+    ],
+    "koverage.lowCoverageThreshold": 50,
+    "koverage.sufficientCoverageThreshold": 75,
+    "coverage-gutters.showGutterCoverage": false,
+    "coverage-gutters.showLineCoverage": true,
+    "private-extension-manager.directories": [
+        ".extensions"
+    ],
+    "private-extension-manager.autoUpdate": true
 }
