@@ -5,7 +5,9 @@
 		}
 	],
 	"settings": {
-
+		"private-extension-manager.directories": [
+			".extensions"
+		]
 	},
 	"extensions": {
 		"recommendations": [
