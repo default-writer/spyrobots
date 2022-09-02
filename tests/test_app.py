@@ -1,4 +1,4 @@
-from src.app import add, sub, double
+from src.app import add, sub, double, say_hello
 
 def test_add():
     # assign
@@ -26,3 +26,10 @@ def test_double():
     c = double(a, b)
     # assert
     assert c == 6
+
+def test_say_hello():
+    # assign
+    # action
+    c = say_hello()
+    # assert
+    assert c == "hello, world!"

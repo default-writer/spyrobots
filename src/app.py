@@ -6,3 +6,6 @@ def sub(a, b):
 
 def double(a, b):
     return 2*a + 2*b
+
+def say_hello():
+    return "hello, world!"
